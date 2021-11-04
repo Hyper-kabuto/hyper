@@ -1,0 +1,9 @@
+import xlrd
+data = xlrd.open_workbook('12.xlsx')
+r = data.sheet_by_index(0)
+nrow = r.nrows
+ncol=r.ncols
+for i in range(nrow):
+    for j in range (ncol):
+        print(r.cell_value(i,j),end='\t')
+    print()
